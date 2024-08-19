@@ -116,7 +116,7 @@ function _mapNewToLegacyParams(params: FeeQuoteParams): OrderQuoteRequest {
     // check buy token, if native, use native address
     buyToken: toNativeBuyAddress(buyToken, chainId),
     from: fallbackAddress,
-    receiver: receiver || fallbackAddress,
+    receiver,
     appData,
     appDataHash,
     partiallyFillable: false,

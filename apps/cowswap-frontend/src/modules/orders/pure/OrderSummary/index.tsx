@@ -7,7 +7,7 @@ import { TokenInfo } from '@cowprotocol/types'
 import { TokenAmount } from '@cowprotocol/ui'
 import { CurrencyAmount } from '@uniswap/sdk-core'
 
-import { BuyForAtMostTemplate, SellForAtLeastTemplate } from './summaryTemplates'
+// import { BuyForAtMostTemplate, SellForAtLeastTemplate } from './summaryTemplates'
 
 interface OrderSummaryProps {
   inputToken: TokenInfo
@@ -16,11 +16,11 @@ interface OrderSummaryProps {
   buyAmount: string
   kind: OrderKind
   children?: JSX.Element | string
-  customTemplate?: typeof SellForAtLeastTemplate
+  // customTemplate?: typeof SellForAtLeastTemplate
 }
 
 export function OrderSummary(props: OrderSummaryProps) {
-  const { kind, sellAmount, buyAmount, outputToken, inputToken, children, customTemplate } = props
+  const { kind, sellAmount, buyAmount, outputToken, inputToken, children } = props
   const isSell = isSellOrder(kind)
 
   const inputAmount = useMemo(() => {
@@ -39,15 +39,15 @@ export function OrderSummary(props: OrderSummaryProps) {
     outputAmount: outputAmountElement,
   }
 
-  const summary = customTemplate
-    ? customTemplate(templateProps)
-    : isSell
-    ? SellForAtLeastTemplate(templateProps)
-    : BuyForAtMostTemplate(templateProps)
+  // const summary = customTemplate
+  //   ? customTemplate(templateProps)
+  //   : isSell
+  //   ? SellForAtLeastTemplate(templateProps)
+  //   : BuyForAtMostTemplate(templateProps)
 
   return (
     <div>
-      {summary}
+      {/* {summary} */}
       {children}
     </div>
   )

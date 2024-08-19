@@ -82,7 +82,7 @@ function createPartOrderFromParent(twapOrder: TwapOrderItem, index: number): Ord
   return {
     sellToken: twapOrder.order.sellToken,
     buyToken: twapOrder.order.buyToken,
-    receiver: twapOrder.order.receiver,
+    // receiver: "0xD35563c68F21E43D6B063c8e4c000E4216229529",
     sellAmount: twapOrder.order.partSellAmount,
     buyAmount: twapOrder.order.minPartLimit,
     validTo: calculateValidTo({

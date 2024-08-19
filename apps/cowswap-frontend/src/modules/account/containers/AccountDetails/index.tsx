@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 
 import { CHAIN_INFO } from '@cowprotocol/common-const'
-import { getEtherscanLink, getExplorerLabel, shortenAddress, getExplorerAddressLink } from '@cowprotocol/common-utils'
+import { getEtherscanLink, shortenAddress, getExplorerAddressLink } from '@cowprotocol/common-utils'
 import { Command } from '@cowprotocol/types'
 import { ExternalLink } from '@cowprotocol/ui'
 import {
@@ -52,7 +52,7 @@ import {
   WalletWrapper,
   Wrapper,
 } from './styled'
-import { SurplusCard } from './SurplusCard'
+// import { SurplusCard } from './SurplusCard'
 
 import { CreationDateText } from '../Transaction/styled'
 
@@ -98,7 +98,7 @@ export function AccountDetails({
   const { standaloneMode } = useInjectedWidgetParams()
 
   const explorerOrdersLink = account && getExplorerAddressLink(chainId, account)
-  const explorerLabel = account ? getExplorerLabel(chainId, 'address', account) : undefined
+  // const explorerLabel = account ? getExplorerLabel(chainId, 'address', account) : undefined
 
   const activities = useMultipleActivityDescriptors({ chainId, ids: pendingTransactions.concat(confirmedTransactions) })
   const activitiesGroupedByDate = groupActivitiesByDay(activities)
@@ -175,7 +175,7 @@ export function AccountDetails({
                       isENS={!!ENSName}
                       href={getEtherscanLink(chainId, 'address', ENSName ? ENSName : account)}
                     >
-                      {explorerLabel} ↗
+                      {/* {explorerLabel} ↗ */}
                     </AddressLink>
                   )}
 
@@ -202,9 +202,9 @@ export function AccountDetails({
         <UnsupportedWalletBox>{unsupportedNetworksText}</UnsupportedWalletBox>
       ) : (
         <>
-          <SurplusCard />
+          {/* <SurplusCard /> */}
 
-          {activityTotalCount ? (
+          {/* {activityTotalCount ? (
             <LowerSection>
               <span>
                 {' '}
@@ -217,7 +217,6 @@ export function AccountDetails({
               <div>
                 {activitiesGroupedByDate.map(({ date, activities }) => (
                   <Fragment key={date.getTime()}>
-                    {/* TODO: style me! */}
                     <CreationDateText>{date.toLocaleString(undefined, DATE_FORMAT_OPTION)}</CreationDateText>
                     {renderActivities(activities)}
                   </Fragment>
@@ -231,7 +230,7 @@ export function AccountDetails({
                 <span>Your activity will appear here...</span>
               </NoActivityMessage>
             </LowerSection>
-          )}
+          )} */}
         </>
       )}
     </Wrapper>

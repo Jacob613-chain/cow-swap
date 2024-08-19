@@ -43,7 +43,7 @@ export const InfoPopup = styled.div`
     text-decoration: underline;
 
     &::after {
-      content: ' ↗';
+      // content: ' ↗';
       display: inline-block;
       font-size: 12px;
     }

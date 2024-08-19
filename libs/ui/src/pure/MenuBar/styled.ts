@@ -113,42 +113,42 @@ export const NavDaoTriggerElement = styled.div<{ isActive: boolean; mobileMode?:
   }
 `
 
-export const MobileMenuTrigger = styled.div<{ theme: CowSwapTheme; mobileMode?: boolean }>`
-  --size: 42px;
+// export const MobileMenuTrigger = styled.div<{ theme: CowSwapTheme; mobileMode?: boolean }>`
+//   --size: 42px;
 
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  height: var(--size);
-  width: var(--size);
-  min-width: var(--size);
-  min-height: var(--size);
-  border-radius: 50%;
-  background: transparent;
-  color: var(--defaultFill);
-  cursor: pointer;
-  transition: background 0.2s, fill 0.2s;
+//   display: flex;
+//   flex-flow: row wrap;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 16px;
+//   height: var(--size);
+//   width: var(--size);
+//   min-width: var(--size);
+//   min-height: var(--size);
+//   border-radius: 50%;
+//   background: transparent;
+//   color: var(--defaultFill);
+//   cursor: pointer;
+//   transition: background 0.2s, fill 0.2s;
 
-  &:hover {
-    background: var(--activeBackground);
-    color: var(--activeFill);
-  }
+//   &:hover {
+//     background: var(--activeBackground);
+//     color: var(--activeFill);
+//   }
 
-  > svg {
-    --size: 21px;
-    height: var(--size);
-    width: var(--size);
-    object-fit: contain;
-    color: currentColor;
-    margin: auto;
-  }
+//   > svg {
+//     --size: 21px;
+//     height: var(--size);
+//     width: var(--size);
+//     object-fit: contain;
+//     color: currentColor;
+//     margin: auto;
+//   }
 
-  > svg path {
-    fill: currentColor;
-  }
-`
+//   > svg path {
+//     fill: currentColor;
+//   }
+// `
 
 export const NavItems = styled.ul<{ mobileMode?: boolean; theme: CowSwapTheme }>`
   --marginLeft: 20px;

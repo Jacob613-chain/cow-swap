@@ -93,11 +93,11 @@ export const FooterAnimation = () => {
     <FooterAnimationContainer ref={containerRef}>
       <ScrollingContent ref={contentRef}>
         <ScrollingContentWrapper>
-          <b>MOOOOOOOOOOOOOOOOOO</b>
+          <b>Planet</b>
           <SVG src={IMG_FLYING_WINK_COW_DARK} />
         </ScrollingContentWrapper>
         <ScrollingContentWrapper>
-          <b>MOOOOOOOOOOOOOOOOOO</b>
+          <b>Planet</b>
           <SVG src={IMG_FLYING_WINK_COW_DARK} />
         </ScrollingContentWrapper>
       </ScrollingContent>

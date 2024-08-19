@@ -87,7 +87,7 @@ export function Step2({ order, cancellation, creation }: EthFlowStepperProps) {
 
   return (
     <Step state={stepState} icon={icon} label={label} errorMessage={error}>
-      {isOrderCreated && <ExplorerLinkStyled type="transaction" label="View details" id={orderId} />}
+      {/* {isOrderCreated && <ExplorerLinkStyled type="transaction" label="View details" id={orderId} />} */}
     </Step>
   )
 }

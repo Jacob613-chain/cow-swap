@@ -379,7 +379,7 @@ export function ActivityDetails(props: {
 
           {activityLinkUrl && enhancedTransaction?.replacementType !== 'replaced' && (
             <ActivityLink href={activityLinkUrl} disableMouseActions={disableMouseActions}>
-              View details ↗
+              {/* View details ↗ */}
             </ActivityLink>
           )}
           <GnosisSafeTxDetails chainId={chainId} activityDerivedState={activityDerivedState} />

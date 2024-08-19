@@ -108,13 +108,13 @@ export function getEtherscanLink(chainId: SupportedChainId, type: BlockExplorerL
   }
 }
 
-export function getExplorerLabel(chainId: SupportedChainId, type: BlockExplorerLinkType, data?: string): string {
-  if (isCowOrder(type, data)) {
-    return 'View on Explorer'
-  }
+// export function getExplorerLabel(chainId: SupportedChainId, type: BlockExplorerLinkType, data?: string): string {
+//   if (isCowOrder(type, data)) {
+//     return 'View on Explorer'
+//   }
 
-  return `View on ${CHAIN_INFO[chainId].explorerTitle}`
-}
+//   return `View on ${CHAIN_INFO[chainId].explorerTitle}`
+// }
 
 export function shortenOrderId(orderId: string): string {
   return orderId.slice(0, 6) + '...' + orderId.slice(orderId.length - 4)

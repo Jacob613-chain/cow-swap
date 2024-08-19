@@ -50,7 +50,7 @@ const plurals: LocalePlural = {
   'da-DK': da,
   'de-DE': de,
   'el-GR': el,
-  'en-US': en,
+  // 'en-US': en,
   'es-ES': es,
   'fi-FI': fi,
   'fr-FR': fr,
@@ -75,6 +75,7 @@ const plurals: LocalePlural = {
   'vi-VN': vi,
   'zh-CN': zh,
   'zh-TW': zh,
+  '	en-HK': en,
   pseudo: en,
 }
 

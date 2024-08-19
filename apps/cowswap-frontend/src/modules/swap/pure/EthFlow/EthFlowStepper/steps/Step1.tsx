@@ -24,7 +24,7 @@ export function Step1(props: EthFlowStepperProps) {
 
   return (
     <Step state={state} icon={icon} label={label}>
-      {hash && !replaced && <ExplorerLinkStyled type="transaction" label="View transaction" id={hash} />}
+      {/* {hash && !replaced && <ExplorerLinkStyled type="transaction" label="View transaction" id={hash} />} */}
     </Step>
   )
 }

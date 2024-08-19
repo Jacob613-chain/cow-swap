@@ -21,14 +21,14 @@ export function OnchainTransactionEventsUpdater() {
     const listener: CowEventListener<CowEvents> = {
       event: CowEvents.ON_ONCHAIN_TRANSACTION,
       handler(payload: OnTransactionPayload) {
-        const { receipt, summary } = payload
+        const { receipt } = payload
         const isSuccess = receipt.status === 1 && receipt.replacementType !== 'cancel'
 
         // Display a snackbar in CowSwap UI
         addSnackbar({
           content: (
             <TransactionContentWithLink transactionHash={receipt.transactionHash}>
-              <>{summary}</>
+              {/* <>{summary}</> */}
             </TransactionContentWithLink>
           ),
           id: receipt.transactionHash,
@@ -40,7 +40,6 @@ export function OnchainTransactionEventsUpdater() {
           messageType: isSuccess
             ? ToastMessageType.ONCHAIN_TRANSACTION_MINED
             : ToastMessageType.ONCHAIN_TRANSACTION_FAILED,
-          message: summary,
           data: {
             transactionHash: receipt.transactionHash,
           },

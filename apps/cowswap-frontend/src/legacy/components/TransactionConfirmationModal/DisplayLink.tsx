@@ -1,4 +1,4 @@
-import { getBlockExplorerUrl, getEtherscanLink, getExplorerLabel } from '@cowprotocol/common-utils'
+import { getBlockExplorerUrl, getEtherscanLink } from '@cowprotocol/common-utils'
 
 import { Text } from 'rebass'
 
@@ -26,12 +26,12 @@ export function DisplayLink({ id, chainId }: DisplayLinkProps) {
   const href = ethFlowHash
     ? getBlockExplorerUrl(chainId, 'transaction', ethFlowHash)
     : getEtherscanLink(chainId, 'transaction', id)
-  const label = getExplorerLabel(chainId, 'transaction', ethFlowHash || id)
+  // const label = getExplorerLabel(chainId, 'transaction', ethFlowHash || id)
 
   return (
     <ExternalLinkCustom href={href}>
       <Text fontWeight={500} fontSize={14}>
-        {label} ↗
+        {/* {label} ↗ */}
       </Text>
     </ExternalLinkCustom>
   )

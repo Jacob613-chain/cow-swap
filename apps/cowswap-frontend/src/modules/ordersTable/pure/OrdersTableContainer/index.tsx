@@ -162,7 +162,7 @@ const ExternalLinkStyled = styled(ExternalLink)`
 const ExternalArrow = styled.span`
   display: inline-block;
   &::after {
-    content: ' ↗';
+    // content: ' ↗';
     display: inline-block;
     padding: 0 0 0 1px;
     font-weight: bold;

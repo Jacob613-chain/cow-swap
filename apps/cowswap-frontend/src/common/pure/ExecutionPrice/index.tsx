@@ -27,6 +27,7 @@ export function ExecutionPrice({
   const quoteCurrency = isInverted ? executionPrice?.baseCurrency : executionPrice?.quoteCurrency
   const baseCurrency = isInverted ? executionPrice?.quoteCurrency : executionPrice?.baseCurrency
   const oneBaseCurrency = tryParseCurrencyAmount('1', baseCurrency)
+  console.log("Tokenamoint:", TokenAmount);
 
   return (
     <span className={className}>

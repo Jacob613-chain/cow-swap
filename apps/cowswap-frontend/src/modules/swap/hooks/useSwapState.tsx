@@ -92,7 +92,7 @@ export function useSwapActionHandlers(): SwapActions {
     },
     [dispatch]
   )
-
+  
   const onChangeRecipient = useCallback(
     (recipient: string | null) => {
       dispatch(setRecipient({ recipient }))
@@ -133,7 +133,6 @@ export function useHighFeeWarning(trade?: TradeGp) {
     const totalFeeAmount = volumeFeeAmount ? feeAsCurrency.add(volumeFeeAmount) : feeAsCurrency
     const targetAmount = isExactInput ? outputAmountWithoutFee : inputAmountAfterFees
     const feePercentage = totalFeeAmount.divide(targetAmount).multiply(100).asFraction
-
     return [feePercentage.greaterThan(FEE_SIZE_THRESHOLD), feePercentage]
   }, [trade])
 
@@ -216,6 +215,7 @@ export function useDerivedSwapInfo(): DerivedSwapInfo {
 
   const inputCurrencyBalance = useCurrencyAmountBalance(inputCurrency)
   const outputCurrencyBalance = useCurrencyAmountBalance(outputCurrency)
+  // console.log("outputCurrencyBalance:", outputCurrencyBalance);
 
   const isExactIn: boolean = independentField === Field.INPUT
   const parsedAmount = useMemo(
@@ -315,7 +315,7 @@ export function useDerivedSwapInfo(): DerivedSwapInfo {
     // const [balanceIn, amountIn] = [currencyBalances[Field.INPUT], trade.trade?.maximumAmountIn(allowedSlippage)] // mod
     const balanceIn = currencyBalances[Field.INPUT]
     const amountIn = slippageAdjustedSellAmount
-
+    // console.log("balanceIn:", balanceIn);
     // Balance not loaded - fix for https://github.com/cowprotocol/cowswap/issues/451
     if (!balanceIn && inputCurrency) {
       inputError = t`Couldn't load balances`
@@ -324,7 +324,7 @@ export function useDerivedSwapInfo(): DerivedSwapInfo {
     if (balanceIn && amountIn && balanceIn.lessThan(amountIn)) {
       inputError = t`Insufficient ${formatSymbol(amountIn.currency.symbol)} balance`
     }
-
+    // console.log("parsedAmount:", parsedAmount);
     return inputError
   }, [account, slippageAdjustedSellAmount, currencies, currencyBalances, inputCurrency, parsedAmount, to]) // mod
 

@@ -69,15 +69,15 @@ export function App() {
 
   const navItems = useMemo(() => {
     return [
-      {
-        label: 'Trade',
-        children: menuItems.map((item) => {
-          const href = parameterizeTradeRoute(tradeContext, item.route, true)
+      // {
+      //   label: 'Trade',
+      //   children: menuItems.map((item) => {
+      //     const href = parameterizeTradeRoute(tradeContext, item.route, true)
 
-          return { href, label: item.label, description: item.description }
-        }),
-      },
-      ...NAV_ITEMS,
+      //     return { href, label: item.label, description: item.description }
+      //   }),
+      // },
+      // ...NAV_ITEMS,
     ]
   }, [tradeContext, menuItems])
 
@@ -108,7 +108,6 @@ export function App() {
           <OrdersPanel />
 
           {!isInjectedWidgetMode && (
-            // TODO: Move hard-coded colors to theme
             <MenuBar
               navItems={navItems}
               productVariant={PRODUCT_VARIANT}
@@ -123,8 +122,8 @@ export function App() {
               activeBackgroundDark="#282854"
               hoverBackgroundDark={'#18193B'}
               LinkComponent={LinkComponent}
-              persistentAdditionalContent={isMobile ? null : persistentAdditionalContent} // This will stay at its original location
-              additionalContent={null} // On desktop renders inside the menu bar, on mobile renders inside the mobile menu
+              persistentAdditionalContent={isMobile ? null : persistentAdditionalContent}
+              additionalContent={null} 
             />
           )}
 

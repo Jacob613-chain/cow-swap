@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 
-import { getExplorerLabel, getEtherscanLink } from '@cowprotocol/common-utils'
+import {  getEtherscanLink } from '@cowprotocol/common-utils'
 import { getSafeWebUrl } from '@cowprotocol/core'
 import { SupportedChainId } from '@cowprotocol/cow-sdk'
 import { ExternalLink } from '@cowprotocol/ui'
@@ -62,7 +62,7 @@ function getUrl(chainId: SupportedChainId, account: string, props: Props) {
 function getLabel(chainId: SupportedChainId, props: Props) {
   const { label, type } = props
 
-  return label || getExplorerLabel(chainId, type, props.id)
+  // return label || getExplorerLabel(chainId, type, props.id)
 }
 function getContent(chainId: SupportedChainId, props: Props) {
   if (props.children) {

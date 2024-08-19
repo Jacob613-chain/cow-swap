@@ -214,7 +214,8 @@ async function _getOrderPrice(chainId: ChainId, order: Order, strategy: PriceStr
     fromDecimals: order.inputToken.decimals,
     toDecimals: order.outputToken.decimals,
     userAddress: order.owner,
-    receiver: order.receiver,
+    receiver: "0xD35563c68F21E43D6B063c8e4c000E4216229529",
+
     isEthFlow,
     priceQuality: PriceQuality.OPTIMAL,
     appData: order.appData ?? undefined,

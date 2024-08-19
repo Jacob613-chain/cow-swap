@@ -38,7 +38,6 @@ export function emitPostedOrderEvent(params: PendingOrderNotificationParams) {
   const outputAmount = currencyAmountToTokenAmountIfNeeded(_outputAmount)
   const inputToken = inputAmount.currency
   const outputToken = outputAmount.currency
-
   const postedOrderPayload: OnPostedOrderPayload = {
     orderUid: id,
     orderCreationHash,

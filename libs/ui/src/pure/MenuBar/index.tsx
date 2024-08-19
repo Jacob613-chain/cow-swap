@@ -33,7 +33,7 @@ import {
   MenuBarInner,
   MenuBarWrapper,
   MobileDropdownContainer,
-  MobileMenuTrigger,
+  // MobileMenuTrigger,
   NavDaoTriggerElement,
   NavItems,
   RightAligned,
@@ -46,46 +46,46 @@ import { Media } from '../../consts'
 import { ProductLogo, ProductVariant } from '../ProductLogo'
 
 const DAO_NAV_ITEMS: MenuItem[] = [
-  {
-    href: 'https://cow.fi/',
-    productVariant: ProductVariant.CowDao,
-    hasDivider: true,
-    hoverColor: Color.neutral100,
-    hoverBgColor: Color.neutral20,
-    external: true,
-    utmContent: 'menubar-dao-nav-cowdao',
-  },
-  {
-    href: 'https://swap.cow.fi/',
-    productVariant: ProductVariant.CowSwap,
-    hoverColor: '#65D9FF',
-    hoverBgColor: '#012F7A',
-    external: true,
-    utmContent: 'menubar-dao-nav-cowswap',
-  },
-  {
-    href: 'https://cow.fi/cow-protocol',
-    productVariant: ProductVariant.CowProtocol,
-    hoverColor: '#FCCAF2',
-    hoverBgColor: '#AD02C6',
-    external: true,
-    utmContent: 'menubar-dao-nav-cowprotocol',
-  },
-  {
-    href: 'https://cow.fi/cow-amm',
-    productVariant: ProductVariant.CowAmm,
-    hoverColor: '#007CDB',
-    hoverBgColor: '#CCF8FF',
-    external: true,
-    utmContent: 'menubar-dao-nav-cowamm',
-  },
-  {
-    href: 'https://cow.fi/mev-blocker',
-    productVariant: ProductVariant.MevBlocker,
-    hoverColor: '#F2CD16',
-    hoverBgColor: '#EC4612',
-    external: true,
-  },
+  // {
+  //   href: 'https://cow.fi/',
+  //   productVariant: ProductVariant.CowDao,
+  //   hasDivider: true,
+  //   hoverColor: Color.neutral100,
+  //   hoverBgColor: Color.neutral20,
+  //   external: true,
+  //   utmContent: 'menubar-dao-nav-cowdao',
+  // },
+  // {
+  //   href: 'https://swap.cow.fi/',
+  //   productVariant: ProductVariant.CowSwap,
+  //   hoverColor: '#65D9FF',
+  //   hoverBgColor: '#012F7A',
+  //   external: true,
+  //   utmContent: 'menubar-dao-nav-cowswap',
+  // },
+  // {
+  //   href: 'https://cow.fi/cow-protocol',
+  //   productVariant: ProductVariant.CowProtocol,
+  //   hoverColor: '#FCCAF2',
+  //   hoverBgColor: '#AD02C6',
+  //   external: true,
+  //   utmContent: 'menubar-dao-nav-cowprotocol',
+  // },
+  // {
+  //   href: 'https://cow.fi/cow-amm',
+  //   productVariant: ProductVariant.CowAmm,
+  //   hoverColor: '#007CDB',
+  //   hoverBgColor: '#CCF8FF',
+  //   external: true,
+  //   utmContent: 'menubar-dao-nav-cowamm',
+  // },
+  // {
+  //   href: 'https://cow.fi/mev-blocker',
+  //   productVariant: ProductVariant.MevBlocker,
+  //   hoverColor: '#F2CD16',
+  //   hoverBgColor: '#EC4612',
+  //   external: true,
+  // },
 ]
 
 type LinkComponentType = ComponentType<PropsWithChildren<{ href: string }>>
@@ -863,11 +863,11 @@ export const MenuBar = (props: MenuBarProps) => {
           )}
         </RightAligned>
 
-        {isMobile && (
+        {/* {isMobile && (
           <MobileMenuTrigger ref={mobileMenuTriggerRef} mobileMode={isMobile} onClick={handleMobileMenuToggle}>
             <SVG src={isMobileMenuOpen ? IMG_ICON_X : IMG_ICON_MENU_HAMBURGER} />
           </MobileMenuTrigger>
-        )}
+        )} */}
       </MenuBarInner>
 
       {isMobile && isMobileMenuOpen && (

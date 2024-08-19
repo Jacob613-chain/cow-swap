@@ -16,7 +16,7 @@ export function IdField({ id, chainId }: Props) {
     <styledEl.Value>
       <ExternalLink href={activityUrl || ''}>
         <span>{id.slice(0, 8)}</span>
-        <span>↗</span>
+        {/* <span>↗</span> */}
       </ExternalLink>
     </styledEl.Value>
   )

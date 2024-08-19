@@ -6,6 +6,7 @@ import { estimateApprove } from 'common/hooks/useApproveCallback'
 export type BuildApproveTxParams = {
   erc20Contract: Erc20
   spender: string
+  // spend : string
   amountToApprove: CurrencyAmount<Currency>
 }
 

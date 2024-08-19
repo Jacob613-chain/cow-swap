@@ -61,7 +61,7 @@ export function SelectTokenModal(props: SelectTokenModalProps) {
     unsupportedTokens,
     permitCompatibleTokens,
   }
-
+  // console.log("balancesState", balancesState);
   return (
     <styledEl.Wrapper>
       <styledEl.Header>

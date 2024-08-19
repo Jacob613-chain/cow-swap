@@ -92,7 +92,7 @@ export function TransactionSubmittedContent({
                 <a href={`#${Routes.PLAY_COWRUNNER}`} target="_blank" rel="noreferrer noopener">
                   <styledEl.ButtonCustom cowGame>
                     <styledEl.StyledIcon src={GameIcon} alt="Play CowGame" />
-                    Play the CoW Runner Game!
+                    Wait a minute!
                   </styledEl.ButtonCustom>
                 </a>
               )}

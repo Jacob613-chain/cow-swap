@@ -27,28 +27,6 @@ export function TransactionExecutedContent({
     <styledEl.ExecutedWrapper>
       <img src={cowMeditatingSmooth} alt="Cow Smoooth ..." />
 
-      <div>
-        <span>
-          Traded{' '}
-          <styledEl.StyledTokenAmount amount={formattedFilledAmount} tokenSymbol={formattedFilledAmount.currency} /> for
-          a total of{' '}
-          <styledEl.StyledTokenAmount amount={formattedSwappedAmount} tokenSymbol={formattedSwappedAmount.currency} />
-        </span>
-
-        {!!surplusAmount && (
-          <span>
-            You received a surplus of <styledEl.StyledTokenAmount amount={surplusAmount} tokenSymbol={surplusToken} />{' '}
-            {showFiatValue && (
-              <span>
-                (<styledEl.StyledFiatAmount amount={surplusFiatValue} />)
-              </span>
-            )}{' '}
-            on this trade!
-          </span>
-        )}
-
-        <DisplayLink id={hash} chainId={chainId} />
-      </div>
     </styledEl.ExecutedWrapper>
   )
 }
